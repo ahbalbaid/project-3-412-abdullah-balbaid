@@ -37,10 +37,10 @@ The main components of the simulation include:
 ## Installation
 
 1. **Clone the repository**:
+
    ```bash
    git clone https://github.com/ahbalbaid/project-3-420-abdullah-balbaid.git
    ```
-````
 
 2. **Install dependencies**:
    - You need a C++ compiler (e.g., `g++`) and Doxygen to generate the documentation.
@@ -94,4 +94,3 @@ make docs
 ```
 
 For detailed documentation, see the [Project Documentation](./docs/html/index.html).
-````
