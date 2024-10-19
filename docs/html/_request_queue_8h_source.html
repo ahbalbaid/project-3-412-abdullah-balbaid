@@ -98,31 +98,31 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="_request_8h.html">Request.h</a>&quot;</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;queue&gt;</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="foldopen" id="foldopen00024" data-start="{" data-end="};">
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="class_request_queue.html">   24</a></span><span class="keyword">class </span><a class="code hl_class" href="class_request_queue.html">RequestQueue</a></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>{</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    std::queue&lt;Request&gt; request_queue_; </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_request_queue.html#a36ee327b27c6c2fa511e01b47cb3f21a">IsEmpty</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <a class="code hl_struct" href="struct_request.html">Request</a> <a class="code hl_function" href="class_request_queue.html#a46f0a411a4ae00af3712e306ea2348c6">pop</a>();</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_request_queue.html#a1a11d61ab39bdb4e8520087212d843c9">push</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_request.html">Request</a> &amp;request);</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_request_queue.html#a740fb2303eb31d5339d0f9cab7ce011e">size</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>};</div>
+<div class="foldopen" id="foldopen00023" data-start="{" data-end="};">
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_request_queue.html">   23</a></span><span class="keyword">class </span><a class="code hl_class" href="class_request_queue.html">RequestQueue</a></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>{</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    std::queue&lt;Request&gt; request_queue_; </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_request_queue.html#a36ee327b27c6c2fa511e01b47cb3f21a">IsEmpty</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <a class="code hl_struct" href="struct_request.html">Request</a> <a class="code hl_function" href="class_request_queue.html#a46f0a411a4ae00af3712e306ea2348c6">pop</a>();</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_request_queue.html#a1a11d61ab39bdb4e8520087212d843c9">push</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_request.html">Request</a> &amp;request);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_request_queue.html#a740fb2303eb31d5339d0f9cab7ce011e">size</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>};</div>
 </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="a_request_8h_html"><div class="ttname"><a href="_request_8h.html">Request.h</a></div><div class="ttdoc">Defines the Request struct for network requests.</div></div>
-<div class="ttc" id="aclass_request_queue_html"><div class="ttname"><a href="class_request_queue.html">RequestQueue</a></div><div class="ttdoc">Manages a queue of requests.</div><div class="ttdef"><b>Definition</b> RequestQueue.h:25</div></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="a_request_8h_html"><div class="ttname"><a href="_request_8h.html">Request.h</a></div><div class="ttdoc">Defines the Request struct.</div></div>
+<div class="ttc" id="aclass_request_queue_html"><div class="ttname"><a href="class_request_queue.html">RequestQueue</a></div><div class="ttdoc">Handles a queue of requests.</div><div class="ttdef"><b>Definition</b> RequestQueue.h:24</div></div>
 <div class="ttc" id="aclass_request_queue_html_a1a11d61ab39bdb4e8520087212d843c9"><div class="ttname"><a href="class_request_queue.html#a1a11d61ab39bdb4e8520087212d843c9">RequestQueue::push</a></div><div class="ttdeci">void push(const Request &amp;request)</div><div class="ttdoc">Adds a request to the queue.</div><div class="ttdef"><b>Definition</b> RequestQueue.cpp:19</div></div>
 <div class="ttc" id="aclass_request_queue_html_a36ee327b27c6c2fa511e01b47cb3f21a"><div class="ttname"><a href="class_request_queue.html#a36ee327b27c6c2fa511e01b47cb3f21a">RequestQueue::IsEmpty</a></div><div class="ttdeci">bool IsEmpty() const</div><div class="ttdoc">Checks if the request queue is empty.</div><div class="ttdef"><b>Definition</b> RequestQueue.cpp:3</div></div>
-<div class="ttc" id="aclass_request_queue_html_a46f0a411a4ae00af3712e306ea2348c6"><div class="ttname"><a href="class_request_queue.html#a46f0a411a4ae00af3712e306ea2348c6">RequestQueue::pop</a></div><div class="ttdeci">Request pop()</div><div class="ttdoc">Retrieves and removes the front request from the queue.</div><div class="ttdef"><b>Definition</b> RequestQueue.cpp:8</div></div>
+<div class="ttc" id="aclass_request_queue_html_a46f0a411a4ae00af3712e306ea2348c6"><div class="ttname"><a href="class_request_queue.html#a46f0a411a4ae00af3712e306ea2348c6">RequestQueue::pop</a></div><div class="ttdeci">Request pop()</div><div class="ttdoc">Retrieves and removes the front request in the queue.</div><div class="ttdef"><b>Definition</b> RequestQueue.cpp:8</div></div>
 <div class="ttc" id="aclass_request_queue_html_a740fb2303eb31d5339d0f9cab7ce011e"><div class="ttname"><a href="class_request_queue.html#a740fb2303eb31d5339d0f9cab7ce011e">RequestQueue::size</a></div><div class="ttdeci">int size() const</div><div class="ttdoc">Returns the size of the request queue.</div><div class="ttdef"><b>Definition</b> RequestQueue.cpp:24</div></div>
-<div class="ttc" id="astruct_request_html"><div class="ttname"><a href="struct_request.html">Request</a></div><div class="ttdoc">Represents a network request to be processed by the system.</div><div class="ttdef"><b>Definition</b> Request.h:24</div></div>
+<div class="ttc" id="astruct_request_html"><div class="ttname"><a href="struct_request.html">Request</a></div><div class="ttdoc">Represents a request for the system to process.</div><div class="ttdef"><b>Definition</b> Request.h:22</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

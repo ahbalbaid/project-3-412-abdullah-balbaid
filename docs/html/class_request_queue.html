@@ -91,7 +91,7 @@ $(function(){ initResizable(false); });
 </div><!--header-->
 <div class="contents">
 
-<p>Manages a queue of requests.  
+<p>Handles a queue of requests.  
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_request_queue_8h_source.html">RequestQueue.h</a>&gt;</code></p>
@@ -102,7 +102,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a36ee327b27c6c2fa511e01b47cb3f21a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the request queue is empty.  <br /></td></tr>
 <tr class="separator:a36ee327b27c6c2fa511e01b47cb3f21a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46f0a411a4ae00af3712e306ea2348c6" id="r_a46f0a411a4ae00af3712e306ea2348c6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_request.html">Request</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a46f0a411a4ae00af3712e306ea2348c6">pop</a> ()</td></tr>
-<tr class="memdesc:a46f0a411a4ae00af3712e306ea2348c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves and removes the front request from the queue.  <br /></td></tr>
+<tr class="memdesc:a46f0a411a4ae00af3712e306ea2348c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves and removes the front request in the queue.  <br /></td></tr>
 <tr class="separator:a46f0a411a4ae00af3712e306ea2348c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a11d61ab39bdb4e8520087212d843c9" id="r_a1a11d61ab39bdb4e8520087212d843c9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1a11d61ab39bdb4e8520087212d843c9">push</a> (const <a class="el" href="struct_request.html">Request</a> &amp;request)</td></tr>
 <tr class="memdesc:a1a11d61ab39bdb4e8520087212d843c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a request to the queue.  <br /></td></tr>
@@ -112,8 +112,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a740fb2303eb31d5339d0f9cab7ce011e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Manages a queue of requests. </p>
-<p>The <a class="el" href="class_request_queue.html" title="Manages a queue of requests.">RequestQueue</a> class provides an interface for managing a queue of network requests. It allows adding requests to the queue, retrieving and removing requests, checking if the queue is empty, and getting the size of the queue. </p>
+<div class="textblock"><p>Handles a queue of requests. </p>
+<p>Provides an interface to manage a queue of requests, including adding new requests, and removing them, checking if the queue is empty, and getting its size. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a36ee327b27c6c2fa511e01b47cb3f21a" name="a36ee327b27c6c2fa511e01b47cb3f21a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a36ee327b27c6c2fa511e01b47cb3f21a">&#9670;&#160;</a></span>IsEmpty()</h2>
@@ -131,7 +131,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Checks if the request queue is empty. </p>
-<dl class="section return"><dt>Returns</dt><dd>True if the queue is empty, false otherwise. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>True if empty, false otherwise. </dd></dl>
 
 </div>
 </div>
@@ -150,8 +150,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Retrieves and removes the front request from the queue. </p>
-<dl class="section return"><dt>Returns</dt><dd>The front request from the queue. </dd></dl>
+<p>Retrieves and removes the front request in the queue. </p>
+<dl class="section return"><dt>Returns</dt><dd>The front request. </dd></dl>
 
 </div>
 </div>

@@ -2,7 +2,7 @@
 \hypertarget{struct_request}{}\label{struct_request}\index{Request@{Request}}
 
 
-Represents a network request to be processed by the system.  
+Represents a request for the system to process.  
 
 
 
@@ -13,21 +13,21 @@ Represents a network request to be processed by the system.
 \begin{DoxyCompactItemize}
 \item 
 size\+\_\+t \mbox{\hyperlink{struct_request_a0c3608fb4c5874660803714e7a7c30f6}{id}}
-\begin{DoxyCompactList}\small\item\em Unique ID of the request. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Unique ID for the request. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{struct_request_a9331de2ccac6bca9a37616d103db6568}{ip\+\_\+in}}
-\begin{DoxyCompactList}\small\item\em Source IP address of the request. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Source IP of the request. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{struct_request_a789e85de4e06e293c519fa6ed14539f3}{ip\+\_\+out}}
-\begin{DoxyCompactList}\small\item\em Destination IP address of the request. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Destination IP of the request. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{struct_request_a3cfb576ed0b5e08612f3de8bc7cd72e2}{time}}
-\begin{DoxyCompactList}\small\item\em Time required to process the request. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Processing time for the request. \end{DoxyCompactList}\item 
 char \mbox{\hyperlink{struct_request_aafa62a577a34455eb8be90021328b236}{job\+\_\+type}}
-\begin{DoxyCompactList}\small\item\em Type of job (\textquotesingle{}P\textquotesingle{} for primary, \textquotesingle{}S\textquotesingle{} for secondary). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Job type (\textquotesingle{}P\textquotesingle{} for primary, \textquotesingle{}S\textquotesingle{} for secondary). \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Represents a network request to be processed by the system. 
+Represents a request for the system to process. 
 
-The \doxylink{struct_request}{Request} struct holds information about an incoming request including its unique ID, source and destination IP addresses, the processing time, and the job type. 
+Holds info about an incoming request like its unique ID, source and destination IPs, processing time, and job type. 
 
 \doxysubsection{Member Data Documentation}
 \Hypertarget{struct_request_a0c3608fb4c5874660803714e7a7c30f6}\index{Request@{Request}!id@{id}}
@@ -38,7 +38,7 @@ size\+\_\+t Request\+::id}
 
 
 
-Unique ID of the request. 
+Unique ID for the request. 
 
 \Hypertarget{struct_request_a9331de2ccac6bca9a37616d103db6568}\index{Request@{Request}!ip\_in@{ip\_in}}
 \index{ip\_in@{ip\_in}!Request@{Request}}
@@ -48,7 +48,7 @@ std\+::string Request\+::ip\+\_\+in}
 
 
 
-Source IP address of the request. 
+Source IP of the request. 
 
 \Hypertarget{struct_request_a789e85de4e06e293c519fa6ed14539f3}\index{Request@{Request}!ip\_out@{ip\_out}}
 \index{ip\_out@{ip\_out}!Request@{Request}}
@@ -58,7 +58,7 @@ std\+::string Request\+::ip\+\_\+out}
 
 
 
-Destination IP address of the request. 
+Destination IP of the request. 
 
 \Hypertarget{struct_request_aafa62a577a34455eb8be90021328b236}\index{Request@{Request}!job\_type@{job\_type}}
 \index{job\_type@{job\_type}!Request@{Request}}
@@ -68,7 +68,7 @@ char Request\+::job\+\_\+type}
 
 
 
-Type of job (\textquotesingle{}P\textquotesingle{} for primary, \textquotesingle{}S\textquotesingle{} for secondary). 
+Job type (\textquotesingle{}P\textquotesingle{} for primary, \textquotesingle{}S\textquotesingle{} for secondary). 
 
 \Hypertarget{struct_request_a3cfb576ed0b5e08612f3de8bc7cd72e2}\index{Request@{Request}!time@{time}}
 \index{time@{time}!Request@{Request}}
@@ -78,7 +78,7 @@ int Request\+::time}
 
 
 
-Time required to process the request. 
+Processing time for the request. 
 
 
 

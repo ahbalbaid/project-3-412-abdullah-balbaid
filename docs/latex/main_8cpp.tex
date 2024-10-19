@@ -2,7 +2,7 @@
 \hypertarget{main_8cpp}{}\label{main_8cpp}\index{src/main.cpp@{src/main.cpp}}
 
 
-Simulates a load balancer distributing requests to web servers.  
+Load balancer simulation for handling web server requests.  
 
 
 {\ttfamily \#include "{}Request.\+h"{}}\newline
@@ -19,28 +19,28 @@ Simulates a load balancer distributing requests to web servers.
 \begin{DoxyCompactItemize}
 \item 
 string \mbox{\hyperlink{main_8cpp_abf0b2718aa8a50c1942f694500b61bf9}{Simulation\+ID}} ()
-\begin{DoxyCompactList}\small\item\em Generates a unique simulation ID based on the current time. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Generates a unique simulation ID using the current time. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{main_8cpp_a0eb34184a19958adcc2077d9331956e9}{print}} (ofstream \&log\+File, const string \&message)
-\begin{DoxyCompactList}\small\item\em Prints a message to both the terminal and the log file. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Outputs a message to both the terminal and the log file. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{struct_request}{Request}} \mbox{\hyperlink{main_8cpp_ab009d2590384615cafe33e5afbda774a}{Create\+Random\+Request}} ()
-\begin{DoxyCompactList}\small\item\em Generates a random network request. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Creates a random request. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
-\begin{DoxyCompactList}\small\item\em Main function that runs the load balancer simulation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Main function to run the load balancer simulation. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-int \mbox{\hyperlink{main_8cpp_a8d8821219703856cc7c74ca4eb7b2725}{k\+Num\+Web\+Servers}} = 5
-\begin{DoxyCompactList}\small\item\em The number of web servers in the simulation. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{main_8cpp_a4b76d4688d62239e4132e61950c073d4}{k\+Num\+Requests}} = 10
-\begin{DoxyCompactList}\small\item\em The number of requests to generate in the simulation. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8cpp_a8d8821219703856cc7c74ca4eb7b2725}{k\+Num\+Web\+Servers}} = 10
+\begin{DoxyCompactList}\small\item\em Number of web servers in the simulation. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8cpp_a4b76d4688d62239e4132e61950c073d4}{k\+Num\+Requests}} = \mbox{\hyperlink{main_8cpp_a8d8821219703856cc7c74ca4eb7b2725}{k\+Num\+Web\+Servers}} \texorpdfstring{$\ast$}{*} 100
+\begin{DoxyCompactList}\small\item\em Number of requests initially generated in the simulation. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{main_8cpp_ac8aadb5eb6147f054cfaf7b3fe18e7a6}{k\+Sim\+Duration}} = 10000
-\begin{DoxyCompactList}\small\item\em The total duration of the simulation in cycles. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Total duration of the simulation, measured in cycles. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Simulates a load balancer distributing requests to web servers. 
+Load balancer simulation for handling web server requests. 
 
-This simulation manages network requests and assigns them to a pool of web servers. The servers process the requests based on the load, and new servers can be dynamically added or removed based on queue size. The simulation logs events such as request assignments, server additions, and removals. 
+This simulates a load balancer distributing network requests across multiple web servers. It dynamically manages the servers, adjusting their count based on the current load in the queue. You\textquotesingle{}ll see logs for things like assigning requests, adding servers, or removing them when necessary. 
 
 \doxysubsection{Function Documentation}
 \Hypertarget{main_8cpp_ab009d2590384615cafe33e5afbda774a}\index{main.cpp@{main.cpp}!CreateRandomRequest@{CreateRandomRequest}}
@@ -51,12 +51,12 @@ This simulation manages network requests and assigns them to a pool of web serve
 
 
 
-Generates a random network request. 
+Creates a random request. 
 
-This function creates a {\ttfamily \doxylink{struct_request}{Request}} object with randomly generated source and destination IP addresses, processing time, and job type (\textquotesingle{}P\textquotesingle{} for primary and \textquotesingle{}S\textquotesingle{} for secondary).
+Generates a {\ttfamily \doxylink{struct_request}{Request}} object with random source and destination IPs, processing time, and job type (\textquotesingle{}P\textquotesingle{} for primary, \textquotesingle{}S\textquotesingle{} for secondary) and a unique hashed ID.
 
 \begin{DoxyReturn}{Returns}
-A randomly generated {\ttfamily \doxylink{struct_request}{Request}}. 
+A randomly generated {\ttfamily \doxylink{struct_request}{Request}} object. 
 \end{DoxyReturn}
 \Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\index{main.cpp@{main.cpp}!main@{main}}
 \index{main@{main}!main.cpp@{main.cpp}}
@@ -66,12 +66,12 @@ int main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 
 
-Main function that runs the load balancer simulation. 
+Main function to run the load balancer simulation. 
 
-The main function initializes the load balancer, generates requests, adds servers, and processes requests over a simulated time period. It dynamically adjusts the number of active servers based on the request queue size and logs key events such as server additions, removals, and request processing.
+Initializes the load balancer, generates requests, manages servers, and processes them throughout the simulation. Adjusts the server count based on queue load and logs key events like adding/removing servers and handling requests.
 
 \begin{DoxyReturn}{Returns}
-0 on successful completion of the simulation. 
+0 when the simulation completes successfully. 
 \end{DoxyReturn}
 \Hypertarget{main_8cpp_a0eb34184a19958adcc2077d9331956e9}\index{main.cpp@{main.cpp}!print@{print}}
 \index{print@{print}!main.cpp@{main.cpp}}
@@ -81,13 +81,13 @@ void print (\begin{DoxyParamCaption}\item[{ofstream \&}]{log\+File}{, }\item[{co
 
 
 
-Prints a message to both the terminal and the log file. 
+Outputs a message to both the terminal and the log file. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em log\+File} & The log file to write the message to. \\
+{\em log\+File} & The file where the message will be logged. \\
 \hline
-{\em message} & The message to be printed. \\
+{\em message} & The message to display and log. \\
 \hline
 \end{DoxyParams}
 \Hypertarget{main_8cpp_abf0b2718aa8a50c1942f694500b61bf9}\index{main.cpp@{main.cpp}!SimulationID@{SimulationID}}
@@ -98,10 +98,10 @@ string Simulation\+ID (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 
 
-Generates a unique simulation ID based on the current time. 
+Generates a unique simulation ID using the current time. 
 
 \begin{DoxyReturn}{Returns}
-A unique simulation ID as a string. 
+A string representing the unique simulation ID. 
 \end{DoxyReturn}
 
 
@@ -110,21 +110,21 @@ A unique simulation ID as a string.
 \index{kNumRequests@{kNumRequests}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{kNumRequests}{kNumRequests}}
 {\footnotesize\ttfamily \label{main_8cpp_a4b76d4688d62239e4132e61950c073d4} 
-int k\+Num\+Requests = 10}
+int k\+Num\+Requests = \mbox{\hyperlink{main_8cpp_a8d8821219703856cc7c74ca4eb7b2725}{k\+Num\+Web\+Servers}} \texorpdfstring{$\ast$}{*} 100}
 
 
 
-The number of requests to generate in the simulation. 
+Number of requests initially generated in the simulation. 
 
 \Hypertarget{main_8cpp_a8d8821219703856cc7c74ca4eb7b2725}\index{main.cpp@{main.cpp}!kNumWebServers@{kNumWebServers}}
 \index{kNumWebServers@{kNumWebServers}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{kNumWebServers}{kNumWebServers}}
 {\footnotesize\ttfamily \label{main_8cpp_a8d8821219703856cc7c74ca4eb7b2725} 
-int k\+Num\+Web\+Servers = 5}
+int k\+Num\+Web\+Servers = 10}
 
 
 
-The number of web servers in the simulation. 
+Number of web servers in the simulation. 
 
 \Hypertarget{main_8cpp_ac8aadb5eb6147f054cfaf7b3fe18e7a6}\index{main.cpp@{main.cpp}!kSimDuration@{kSimDuration}}
 \index{kSimDuration@{kSimDuration}!main.cpp@{main.cpp}}
@@ -134,5 +134,5 @@ int k\+Sim\+Duration = 10000}
 
 
 
-The total duration of the simulation in cycles. 
+Total duration of the simulation, measured in cycles. 
 

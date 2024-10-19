@@ -2,7 +2,7 @@
 \hypertarget{class_request_queue}{}\label{class_request_queue}\index{RequestQueue@{RequestQueue}}
 
 
-Manages a queue of requests.  
+Handles a queue of requests.  
 
 
 
@@ -15,7 +15,7 @@ Manages a queue of requests.
 bool \mbox{\hyperlink{class_request_queue_a36ee327b27c6c2fa511e01b47cb3f21a}{Is\+Empty}} () const
 \begin{DoxyCompactList}\small\item\em Checks if the request queue is empty. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{struct_request}{Request}} \mbox{\hyperlink{class_request_queue_a46f0a411a4ae00af3712e306ea2348c6}{pop}} ()
-\begin{DoxyCompactList}\small\item\em Retrieves and removes the front request from the queue. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Retrieves and removes the front request in the queue. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_request_queue_a1a11d61ab39bdb4e8520087212d843c9}{push}} (const \mbox{\hyperlink{struct_request}{Request}} \&request)
 \begin{DoxyCompactList}\small\item\em Adds a request to the queue. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_request_queue_a740fb2303eb31d5339d0f9cab7ce011e}{size}} () const
@@ -23,9 +23,9 @@ int \mbox{\hyperlink{class_request_queue_a740fb2303eb31d5339d0f9cab7ce011e}{size
 
 
 \doxysubsection{Detailed Description}
-Manages a queue of requests. 
+Handles a queue of requests. 
 
-The \doxylink{class_request_queue}{Request\+Queue} class provides an interface for managing a queue of network requests. It allows adding requests to the queue, retrieving and removing requests, checking if the queue is empty, and getting the size of the queue. 
+Provides an interface to manage a queue of requests, including adding new requests, and removing them, checking if the queue is empty, and getting its size. 
 
 \doxysubsection{Member Function Documentation}
 \Hypertarget{class_request_queue_a36ee327b27c6c2fa511e01b47cb3f21a}\index{RequestQueue@{RequestQueue}!IsEmpty@{IsEmpty}}
@@ -39,7 +39,7 @@ bool Request\+Queue\+::\+Is\+Empty (\begin{DoxyParamCaption}{}{}\end{DoxyParamCa
 Checks if the request queue is empty. 
 
 \begin{DoxyReturn}{Returns}
-True if the queue is empty, false otherwise. 
+True if empty, false otherwise. 
 \end{DoxyReturn}
 \Hypertarget{class_request_queue_a46f0a411a4ae00af3712e306ea2348c6}\index{RequestQueue@{RequestQueue}!pop@{pop}}
 \index{pop@{pop}!RequestQueue@{RequestQueue}}
@@ -49,10 +49,10 @@ True if the queue is empty, false otherwise.
 
 
 
-Retrieves and removes the front request from the queue. 
+Retrieves and removes the front request in the queue. 
 
 \begin{DoxyReturn}{Returns}
-The front request from the queue. 
+The front request. 
 \end{DoxyReturn}
 \Hypertarget{class_request_queue_a1a11d61ab39bdb4e8520087212d843c9}\index{RequestQueue@{RequestQueue}!push@{push}}
 \index{push@{push}!RequestQueue@{RequestQueue}}

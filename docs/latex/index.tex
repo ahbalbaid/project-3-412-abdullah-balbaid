@@ -3,13 +3,13 @@
 \label{index_md__r_e_a_d_m_e}%
 \Hypertarget{index_md__r_e_a_d_m_e}%
 \hypertarget{index_autotoc_md1}{}\doxysection{\texorpdfstring{Overview}{Overview}}\label{index_autotoc_md1}
-This project simulates a load balancer that distributes network requests to web servers. The system handles requests by assigning them to available servers, each of which processes the request and tracks its status. The simulation allows for the dynamic addition and removal of servers based on the request load.
+This project simulates a load balancer that distributes requests to web servers. The system handles requests by assigning them to available servers, each of which processes the request and tracks its status. The simulation allows for the dynamic addition and removal of servers based on the request load.
 
 The main components of the simulation include\+:
 
 
 \begin{DoxyItemize}
-\item {\bfseries{\doxylink{struct_request}{Request}}}\+: Represents a network request with metadata such as source and destination IPs, processing time, and job type.
+\item {\bfseries{\doxylink{struct_request}{Request}}}\+: Represents a request with metadata such as source and destination IPs, processing time, and job type.
 \item {\bfseries{\doxylink{class_request_queue}{Request\+Queue}}}\+: Manages a queue of requests to be processed by the load balancer.
 \item {\bfseries{\doxylink{class_web_server}{Web\+Server}}}\+: Represents a server that processes assigned requests.
 \item {\bfseries{\doxylink{class_load_balancer}{Load\+Balancer}}}\+: Manages the distribution of requests to web servers.
@@ -17,25 +17,35 @@ The main components of the simulation include\+:
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{/loadbalancer\_project}
-\DoxyCodeLine{├──\ /docs\ \#\ Doxygen\ documentation}
-\DoxyCodeLine{├──\ /include\ \#\ Header\ files}
-\DoxyCodeLine{├──\ /src\ \#\ Source\ files}
-\DoxyCodeLine{├──\ /scripts\ \#\ Python\ scripts}
-\DoxyCodeLine{├──\ Doxyfile\ \#\ Doxygen\ configuration\ file}
-\DoxyCodeLine{├──\ Makefile\ \#\ Makefile\ for\ building\ and\ generating\ documentation}
-\DoxyCodeLine{└──\ README.md\ \#\ Project\ overview\ and\ instructions}
-\DoxyCodeLine{}
-\DoxyCodeLine{\`{}\`{}\`{}\`{}}
-\DoxyCodeLine{}
-\DoxyCodeLine{\#\#\ Installation}
-\DoxyCodeLine{}
-\DoxyCodeLine{1.\ **Clone\ the\ repository**:}
+\DoxyCodeLine{├──\ /bin\ \ \ \ \ \ \ \ \ \ \ \ \#\ Compiled\ binary\ files}
+\DoxyCodeLine{├──\ /data\ \ \ \ \ \ \ \ \ \ \ \#\ Generated\ CSV\ data\ files}
+\DoxyCodeLine{├──\ /docs\ \ \ \ \ \ \ \ \ \ \ \#\ Doxygen\ documentation}
+\DoxyCodeLine{├──\ /include\ \ \ \ \ \ \ \ \#\ Header\ files}
+\DoxyCodeLine{├──\ /logs\ \ \ \ \ \ \ \ \ \ \ \#\ Log\ files\ from\ the\ simulation}
+\DoxyCodeLine{├──\ /plots\ \ \ \ \ \ \ \ \ \ \#\ Generated\ plots\ from\ Python\ scripts}
+\DoxyCodeLine{├──\ /scripts\ \ \ \ \ \ \ \ \#\ Python\ scripts\ for\ data\ visualization}
+\DoxyCodeLine{│\ \ \ └──\ plot\_data.py\ \#\ Script\ for\ generating\ plots\ from\ CSV\ files}
+\DoxyCodeLine{├──\ /src\ \ \ \ \ \ \ \ \ \ \ \ \#\ Source\ files}
+\DoxyCodeLine{│\ \ \ ├──\ main.cpp\ \ \ \ \#\ Main\ simulation\ file}
+\DoxyCodeLine{│\ \ \ ├──\ LoadBalancer.cpp}
+\DoxyCodeLine{│\ \ \ ├──\ Request.cpp}
+\DoxyCodeLine{│\ \ \ └──\ WebServer.cpp}
+\DoxyCodeLine{├──\ Doxyfile\ \ \ \ \ \ \ \ \#\ Doxygen\ configuration\ file}
+\DoxyCodeLine{├──\ Makefile\ \ \ \ \ \ \ \ \#\ Makefile\ for\ building\ and\ generating\ documentation}
+\DoxyCodeLine{└──\ README.md\ \ \ \ \ \ \ \#\ Project\ overview\ and\ instructions}
 
 \end{DoxyCode}
- bash git clone \texorpdfstring{$<$}{<}repository-\/url\texorpdfstring{$>$}{>} \`{}\`{}\`{}\`{}
-
+\hypertarget{index_autotoc_md3}{}\doxysection{\texorpdfstring{Installation}{Installation}}\label{index_autotoc_md3}
 
 \begin{DoxyEnumerate}
+\item {\bfseries{Clone the repository}}\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{git\ clone\ https://github.com/ahbalbaid/project-\/3-\/420-\/abdullah-\/balbaid.git}
+
+\end{DoxyCode}
+
 \item {\bfseries{Install dependencies}}\+:
 \begin{DoxyItemize}
 \item You need a C++ compiler (e.\+g., {\ttfamily g++}) and Doxygen to generate the documentation.
@@ -46,7 +56,7 @@ The main components of the simulation include\+:
 \end{DoxyCode}
 
 \end{DoxyItemize}
-\end{DoxyEnumerate}\hypertarget{index_autotoc_md3}{}\doxysection{\texorpdfstring{Building and Running}{Building and Running}}\label{index_autotoc_md3}
+\end{DoxyEnumerate}\hypertarget{index_autotoc_md4}{}\doxysection{\texorpdfstring{Building and Running}{Building and Running}}\label{index_autotoc_md4}
 
 \begin{DoxyEnumerate}
 \item {\bfseries{Build the project}}\+:
@@ -67,7 +77,7 @@ The main components of the simulation include\+:
 
 \item {\bfseries{Default run}} (10 servers, 10000 cycles)\+: 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{make\ run-\/default}
+\DoxyCodeLine{make\ start}
 
 \end{DoxyCode}
 
@@ -78,7 +88,7 @@ The main components of the simulation include\+:
 
 \end{DoxyCode}
 
-\end{DoxyEnumerate}\hypertarget{index_autotoc_md4}{}\doxysection{\texorpdfstring{Python Plotting Script}{Python Plotting Script}}\label{index_autotoc_md4}
+\end{DoxyEnumerate}\hypertarget{index_autotoc_md5}{}\doxysection{\texorpdfstring{Python Plotting Script}{Python Plotting Script}}\label{index_autotoc_md5}
 The Python script {\ttfamily \doxylink{plot__data_8py}{plot\+\_\+data.\+py}} is used to plot the simulation statistics.
 
 
@@ -92,7 +102,7 @@ The Python script {\ttfamily \doxylink{plot__data_8py}{plot\+\_\+data.\+py}} is 
 \end{DoxyCode}
 
 \item The script will prompt for a simulation ID and generate a plot of the simulation\textquotesingle{}s queue size and active servers over time.
-\end{DoxyItemize}\hypertarget{index_autotoc_md5}{}\doxysection{\texorpdfstring{Documentation}{Documentation}}\label{index_autotoc_md5}
+\end{DoxyItemize}\hypertarget{index_autotoc_md6}{}\doxysection{\texorpdfstring{Documentation}{Documentation}}\label{index_autotoc_md6}
 The documentation for the project is generated using Doxygen. After generating the documentation, you can open it by navigating to the {\ttfamily docs/html/index.\+html} file in your web browser.
 
 
@@ -102,4 +112,4 @@ The documentation for the project is generated using Doxygen. After generating t
 \end{DoxyCode}
 
 
-For detailed documentation, see the \href{./docs/html/index.html}{\texttt{ Project Documentation}}. 
+For detailed documentation, see the \href{https://ahbalbaid.github.io/project-3-412-abdullah-balbaid/html/index.html}{\texttt{ Project Documentation}}. 

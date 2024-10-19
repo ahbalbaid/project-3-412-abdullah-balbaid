@@ -93,4 +93,4 @@ The documentation for the project is generated using Doxygen. After generating t
 make docs
 ```
 
-For detailed documentation, see the [Project Documentation](./docs/html/index.html).
+For detailed documentation, see the [Project Documentation](https://ahbalbaid.github.io/project-3-412-abdullah-balbaid/html/index.html).

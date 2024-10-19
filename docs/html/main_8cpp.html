@@ -95,7 +95,7 @@ $(function(){ initResizable(false); });
 </div><!--header-->
 <div class="contents">
 
-<p>Simulates a load balancer distributing requests to web servers.  
+<p>Load balancer simulation for handling web server requests.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="_request_8h_source.html">Request.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_web_server_8h_source.html">WebServer.h</a>&quot;</code><br />
@@ -111,33 +111,33 @@ $(function(){ initResizable(false); });
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:abf0b2718aa8a50c1942f694500b61bf9" id="r_abf0b2718aa8a50c1942f694500b61bf9"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf0b2718aa8a50c1942f694500b61bf9">SimulationID</a> ()</td></tr>
-<tr class="memdesc:abf0b2718aa8a50c1942f694500b61bf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates a unique simulation ID based on the current time.  <br /></td></tr>
+<tr class="memdesc:abf0b2718aa8a50c1942f694500b61bf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates a unique simulation ID using the current time.  <br /></td></tr>
 <tr class="separator:abf0b2718aa8a50c1942f694500b61bf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0eb34184a19958adcc2077d9331956e9" id="r_a0eb34184a19958adcc2077d9331956e9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0eb34184a19958adcc2077d9331956e9">print</a> (ofstream &amp;logFile, const string &amp;message)</td></tr>
-<tr class="memdesc:a0eb34184a19958adcc2077d9331956e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a message to both the terminal and the log file.  <br /></td></tr>
+<tr class="memdesc:a0eb34184a19958adcc2077d9331956e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Outputs a message to both the terminal and the log file.  <br /></td></tr>
 <tr class="separator:a0eb34184a19958adcc2077d9331956e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab009d2590384615cafe33e5afbda774a" id="r_ab009d2590384615cafe33e5afbda774a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_request.html">Request</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab009d2590384615cafe33e5afbda774a">CreateRandomRequest</a> ()</td></tr>
-<tr class="memdesc:ab009d2590384615cafe33e5afbda774a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates a random network request.  <br /></td></tr>
+<tr class="memdesc:ab009d2590384615cafe33e5afbda774a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a random request.  <br /></td></tr>
 <tr class="separator:ab009d2590384615cafe33e5afbda774a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4" id="r_ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
-<tr class="memdesc:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main function that runs the load balancer simulation.  <br /></td></tr>
+<tr class="memdesc:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main function to run the load balancer simulation.  <br /></td></tr>
 <tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a8d8821219703856cc7c74ca4eb7b2725" id="r_a8d8821219703856cc7c74ca4eb7b2725"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d8821219703856cc7c74ca4eb7b2725">kNumWebServers</a> = 5</td></tr>
-<tr class="memdesc:a8d8821219703856cc7c74ca4eb7b2725"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of web servers in the simulation.  <br /></td></tr>
+<tr class="memitem:a8d8821219703856cc7c74ca4eb7b2725" id="r_a8d8821219703856cc7c74ca4eb7b2725"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d8821219703856cc7c74ca4eb7b2725">kNumWebServers</a> = 10</td></tr>
+<tr class="memdesc:a8d8821219703856cc7c74ca4eb7b2725"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of web servers in the simulation.  <br /></td></tr>
 <tr class="separator:a8d8821219703856cc7c74ca4eb7b2725"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b76d4688d62239e4132e61950c073d4" id="r_a4b76d4688d62239e4132e61950c073d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4b76d4688d62239e4132e61950c073d4">kNumRequests</a> = 10</td></tr>
-<tr class="memdesc:a4b76d4688d62239e4132e61950c073d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of requests to generate in the simulation.  <br /></td></tr>
+<tr class="memitem:a4b76d4688d62239e4132e61950c073d4" id="r_a4b76d4688d62239e4132e61950c073d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4b76d4688d62239e4132e61950c073d4">kNumRequests</a> = <a class="el" href="#a8d8821219703856cc7c74ca4eb7b2725">kNumWebServers</a> * 100</td></tr>
+<tr class="memdesc:a4b76d4688d62239e4132e61950c073d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of requests initially generated in the simulation.  <br /></td></tr>
 <tr class="separator:a4b76d4688d62239e4132e61950c073d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac8aadb5eb6147f054cfaf7b3fe18e7a6" id="r_ac8aadb5eb6147f054cfaf7b3fe18e7a6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac8aadb5eb6147f054cfaf7b3fe18e7a6">kSimDuration</a> = 10000</td></tr>
-<tr class="memdesc:ac8aadb5eb6147f054cfaf7b3fe18e7a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The total duration of the simulation in cycles.  <br /></td></tr>
+<tr class="memdesc:ac8aadb5eb6147f054cfaf7b3fe18e7a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total duration of the simulation, measured in cycles.  <br /></td></tr>
 <tr class="separator:ac8aadb5eb6147f054cfaf7b3fe18e7a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Simulates a load balancer distributing requests to web servers. </p>
-<p>This simulation manages network requests and assigns them to a pool of web servers. The servers process the requests based on the load, and new servers can be dynamically added or removed based on queue size. The simulation logs events such as request assignments, server additions, and removals. </p>
+<div class="textblock"><p>Load balancer simulation for handling web server requests. </p>
+<p>This simulates a load balancer distributing network requests across multiple web servers. It dynamically manages the servers, adjusting their count based on the current load in the queue. You'll see logs for things like assigning requests, adding servers, or removing them when necessary. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
 <a id="ab009d2590384615cafe33e5afbda774a" name="ab009d2590384615cafe33e5afbda774a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab009d2590384615cafe33e5afbda774a">&#9670;&#160;</a></span>CreateRandomRequest()</h2>
@@ -154,9 +154,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Generates a random network request. </p>
-<p>This function creates a <code><a class="el" href="struct_request.html" title="Represents a network request to be processed by the system.">Request</a></code> object with randomly generated source and destination IP addresses, processing time, and job type ('P' for primary and 'S' for secondary).</p>
-<dl class="section return"><dt>Returns</dt><dd>A randomly generated <code><a class="el" href="struct_request.html" title="Represents a network request to be processed by the system.">Request</a></code>. </dd></dl>
+<p>Creates a random request. </p>
+<p>Generates a <code><a class="el" href="struct_request.html" title="Represents a request for the system to process.">Request</a></code> object with random source and destination IPs, processing time, and job type ('P' for primary, 'S' for secondary) and a unique hashed ID.</p>
+<dl class="section return"><dt>Returns</dt><dd>A randomly generated <code><a class="el" href="struct_request.html" title="Represents a request for the system to process.">Request</a></code> object. </dd></dl>
 
 </div>
 </div>
@@ -175,9 +175,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Main function that runs the load balancer simulation. </p>
-<p>The main function initializes the load balancer, generates requests, adds servers, and processes requests over a simulated time period. It dynamically adjusts the number of active servers based on the request queue size and logs key events such as server additions, removals, and request processing.</p>
-<dl class="section return"><dt>Returns</dt><dd>0 on successful completion of the simulation. </dd></dl>
+<p>Main function to run the load balancer simulation. </p>
+<p>Initializes the load balancer, generates requests, manages servers, and processes them throughout the simulation. Adjusts the server count based on queue load and logs key events like adding/removing servers and handling requests.</p>
+<dl class="section return"><dt>Returns</dt><dd>0 when the simulation completes successfully. </dd></dl>
 
 </div>
 </div>
@@ -200,11 +200,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Prints a message to both the terminal and the log file. </p>
+<p>Outputs a message to both the terminal and the log file. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">logFile</td><td>The log file to write the message to. </td></tr>
-    <tr><td class="paramname">message</td><td>The message to be printed. </td></tr>
+    <tr><td class="paramname">logFile</td><td>The file where the message will be logged. </td></tr>
+    <tr><td class="paramname">message</td><td>The message to display and log. </td></tr>
   </table>
   </dd>
 </dl>
@@ -226,8 +226,8 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Generates a unique simulation ID based on the current time. </p>
-<dl class="section return"><dt>Returns</dt><dd>A unique simulation ID as a string. </dd></dl>
+<p>Generates a unique simulation ID using the current time. </p>
+<dl class="section return"><dt>Returns</dt><dd>A string representing the unique simulation ID. </dd></dl>
 
 </div>
 </div>
@@ -239,12 +239,12 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int kNumRequests = 10</td>
+          <td class="memname">int kNumRequests = <a class="el" href="#a8d8821219703856cc7c74ca4eb7b2725">kNumWebServers</a> * 100</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>The number of requests to generate in the simulation. </p>
+<p>Number of requests initially generated in the simulation. </p>
 
 </div>
 </div>
@@ -255,12 +255,12 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int kNumWebServers = 5</td>
+          <td class="memname">int kNumWebServers = 10</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>The number of web servers in the simulation. </p>
+<p>Number of web servers in the simulation. </p>
 
 </div>
 </div>
@@ -276,7 +276,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>The total duration of the simulation in cycles. </p>
+<p>Total duration of the simulation, measured in cycles. </p>
 
 </div>
 </div>

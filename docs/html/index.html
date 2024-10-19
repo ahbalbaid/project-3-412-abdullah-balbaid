@@ -90,32 +90,39 @@ $(function(){ initResizable(false); });
 <div class="textblock"><p><a class="anchor" id="md__r_e_a_d_m_e"></a></p>
 <h1><a class="anchor" id="autotoc_md1"></a>
 Overview</h1>
-<p>This project simulates a load balancer that distributes network requests to web servers. The system handles requests by assigning them to available servers, each of which processes the request and tracks its status. The simulation allows for the dynamic addition and removal of servers based on the request load.</p>
+<p>This project simulates a load balancer that distributes requests to web servers. The system handles requests by assigning them to available servers, each of which processes the request and tracks its status. The simulation allows for the dynamic addition and removal of servers based on the request load.</p>
 <p>The main components of the simulation include:</p>
 <ul>
-<li><b><a class="el" href="struct_request.html" title="Represents a network request to be processed by the system.">Request</a></b>: Represents a network request with metadata such as source and destination IPs, processing time, and job type.</li>
-<li><b><a class="el" href="class_request_queue.html" title="Manages a queue of requests.">RequestQueue</a></b>: Manages a queue of requests to be processed by the load balancer.</li>
+<li><b><a class="el" href="struct_request.html" title="Represents a request for the system to process.">Request</a></b>: Represents a request with metadata such as source and destination IPs, processing time, and job type.</li>
+<li><b><a class="el" href="class_request_queue.html" title="Handles a queue of requests.">RequestQueue</a></b>: Manages a queue of requests to be processed by the load balancer.</li>
 <li><b><a class="el" href="class_web_server.html" title="Represents a web server that processes requests.">WebServer</a></b>: Represents a server that processes assigned requests.</li>
-<li><b><a class="el" href="class_load_balancer.html" title="Manages the load balancing of requests to web servers.">LoadBalancer</a></b>: Manages the distribution of requests to web servers.</li>
+<li><b><a class="el" href="class_load_balancer.html" title="Manages load balancing for web server requests.">LoadBalancer</a></b>: Manages the distribution of requests to web servers.</li>
 </ul>
 <h1><a class="anchor" id="autotoc_md2"></a>
 Project Structure</h1>
 <div class="fragment"><div class="line">/loadbalancer_project</div>
-<div class="line">├── /docs # Doxygen documentation</div>
-<div class="line">├── /include # Header files</div>
-<div class="line">├── /src # Source files</div>
-<div class="line">├── /scripts # Python scripts</div>
-<div class="line">├── Doxyfile # Doxygen configuration file</div>
-<div class="line">├── Makefile # Makefile for building and generating documentation</div>
-<div class="line">└── README.md # Project overview and instructions</div>
-<div class="line"> </div>
-<div class="line">````</div>
-<div class="line"> </div>
-<div class="line">## Installation</div>
-<div class="line"> </div>
-<div class="line">1. **Clone the repository**:</div>
-</div><!-- fragment --><p> bash git clone &lt;repository-url&gt; ````</p>
+<div class="line">├── /bin            # Compiled binary files</div>
+<div class="line">├── /data           # Generated CSV data files</div>
+<div class="line">├── /docs           # Doxygen documentation</div>
+<div class="line">├── /include        # Header files</div>
+<div class="line">├── /logs           # Log files from the simulation</div>
+<div class="line">├── /plots          # Generated plots from Python scripts</div>
+<div class="line">├── /scripts        # Python scripts for data visualization</div>
+<div class="line">│   └── plot_data.py # Script for generating plots from CSV files</div>
+<div class="line">├── /src            # Source files</div>
+<div class="line">│   ├── main.cpp    # Main simulation file</div>
+<div class="line">│   ├── LoadBalancer.cpp</div>
+<div class="line">│   ├── Request.cpp</div>
+<div class="line">│   └── WebServer.cpp</div>
+<div class="line">├── Doxyfile        # Doxygen configuration file</div>
+<div class="line">├── Makefile        # Makefile for building and generating documentation</div>
+<div class="line">└── README.md       # Project overview and instructions</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md3"></a>
+Installation</h1>
 <ol type="1">
+<li><p class="startli"><b>Clone the repository</b>:</p>
+<div class="fragment"><div class="line">git clone https://github.com/ahbalbaid/project-3-420-abdullah-balbaid.git</div>
+</div><!-- fragment --></li>
 <li><b>Install dependencies</b>:<ul>
 <li>You need a C++ compiler (e.g., <code>g++</code>) and Doxygen to generate the documentation.</li>
 <li>For Python plotting, install the required libraries: <div class="fragment"><div class="line">pip install pandas matplotlib</div>
@@ -123,7 +130,7 @@ Project Structure</h1>
 </ul>
 </li>
 </ol>
-<h1><a class="anchor" id="autotoc_md3"></a>
+<h1><a class="anchor" id="autotoc_md4"></a>
 Building and Running</h1>
 <ol type="1">
 <li><p class="startli"><b>Build the project</b>:</p>
@@ -132,14 +139,14 @@ Building and Running</h1>
 <li><b>Run the simulation</b>:<ul>
 <li><b>Interactive run</b> (input servers and cycles manually): <div class="fragment"><div class="line">make run</div>
 </div><!-- fragment --></li>
-<li><b>Default run</b> (10 servers, 10000 cycles): <div class="fragment"><div class="line">make run-default</div>
+<li><b>Default run</b> (10 servers, 10000 cycles): <div class="fragment"><div class="line">make start</div>
 </div><!-- fragment --></li>
 </ul>
 </li>
 <li><b>Generate documentation</b>: <div class="fragment"><div class="line">make docs</div>
 </div><!-- fragment --></li>
 </ol>
-<h1><a class="anchor" id="autotoc_md4"></a>
+<h1><a class="anchor" id="autotoc_md5"></a>
 Python Plotting Script</h1>
 <p>The Python script <code><a class="el" href="plot__data_8py.html">plot_data.py</a></code> is used to plot the simulation statistics.</p>
 <ul>
@@ -148,11 +155,11 @@ Python Plotting Script</h1>
 </div><!-- fragment --></li>
 <li>The script will prompt for a simulation ID and generate a plot of the simulation's queue size and active servers over time.</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md5"></a>
+<h1><a class="anchor" id="autotoc_md6"></a>
 Documentation</h1>
 <p>The documentation for the project is generated using Doxygen. After generating the documentation, you can open it by navigating to the <code>docs/html/index.html</code> file in your web browser.</p>
 <div class="fragment"><div class="line">make docs</div>
-</div><!-- fragment --><p>For detailed documentation, see the <a href="./docs/html/index.html">Project Documentation</a>. </p>
+</div><!-- fragment --><p>For detailed documentation, see the <a href="https://ahbalbaid.github.io/project-3-412-abdullah-balbaid/html/index.html">Project Documentation</a>. </p>
 </div></div><!-- PageDoc -->
 <a href="doxygen_crawl.html"></a>
 </div><!-- contents -->
