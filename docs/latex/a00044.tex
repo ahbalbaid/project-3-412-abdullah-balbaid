@@ -1,0 +1,87 @@
+\doxysection{Request Struct Reference}
+\hypertarget{a00044}{}\label{a00044}\index{Request@{Request}}
+
+
+Represents a request for the system to process.  
+
+
+
+
+{\ttfamily \#include $<$Request.\+h$>$}
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+size\+\_\+t \mbox{\hyperlink{a00044_a0c3608fb4c5874660803714e7a7c30f6}{id}}
+\begin{DoxyCompactList}\small\item\em Unique ID for the request. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{a00044_a9331de2ccac6bca9a37616d103db6568}{ip\+\_\+in}}
+\begin{DoxyCompactList}\small\item\em Source IP of the request. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{a00044_a789e85de4e06e293c519fa6ed14539f3}{ip\+\_\+out}}
+\begin{DoxyCompactList}\small\item\em Destination IP of the request. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{a00044_a3cfb576ed0b5e08612f3de8bc7cd72e2}{time}}
+\begin{DoxyCompactList}\small\item\em Processing time for the request. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{a00044_aafa62a577a34455eb8be90021328b236}{job\+\_\+type}}
+\begin{DoxyCompactList}\small\item\em Job type (\textquotesingle{}P\textquotesingle{} for primary, \textquotesingle{}S\textquotesingle{} for secondary). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a request for the system to process. 
+
+Holds info about an incoming request like its unique ID, source and destination IPs, processing time, and job type. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{a00044_a0c3608fb4c5874660803714e7a7c30f6}\index{Request@{Request}!id@{id}}
+\index{id@{id}!Request@{Request}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily \label{a00044_a0c3608fb4c5874660803714e7a7c30f6} 
+size\+\_\+t Request\+::id}
+
+
+
+Unique ID for the request. 
+
+\Hypertarget{a00044_a9331de2ccac6bca9a37616d103db6568}\index{Request@{Request}!ip\_in@{ip\_in}}
+\index{ip\_in@{ip\_in}!Request@{Request}}
+\doxysubsubsection{\texorpdfstring{ip\_in}{ip\_in}}
+{\footnotesize\ttfamily \label{a00044_a9331de2ccac6bca9a37616d103db6568} 
+std\+::string Request\+::ip\+\_\+in}
+
+
+
+Source IP of the request. 
+
+\Hypertarget{a00044_a789e85de4e06e293c519fa6ed14539f3}\index{Request@{Request}!ip\_out@{ip\_out}}
+\index{ip\_out@{ip\_out}!Request@{Request}}
+\doxysubsubsection{\texorpdfstring{ip\_out}{ip\_out}}
+{\footnotesize\ttfamily \label{a00044_a789e85de4e06e293c519fa6ed14539f3} 
+std\+::string Request\+::ip\+\_\+out}
+
+
+
+Destination IP of the request. 
+
+\Hypertarget{a00044_aafa62a577a34455eb8be90021328b236}\index{Request@{Request}!job\_type@{job\_type}}
+\index{job\_type@{job\_type}!Request@{Request}}
+\doxysubsubsection{\texorpdfstring{job\_type}{job\_type}}
+{\footnotesize\ttfamily \label{a00044_aafa62a577a34455eb8be90021328b236} 
+char Request\+::job\+\_\+type}
+
+
+
+Job type (\textquotesingle{}P\textquotesingle{} for primary, \textquotesingle{}S\textquotesingle{} for secondary). 
+
+\Hypertarget{a00044_a3cfb576ed0b5e08612f3de8bc7cd72e2}\index{Request@{Request}!time@{time}}
+\index{time@{time}!Request@{Request}}
+\doxysubsubsection{\texorpdfstring{time}{time}}
+{\footnotesize\ttfamily \label{a00044_a3cfb576ed0b5e08612f3de8bc7cd72e2} 
+int Request\+::time}
+
+
+
+Processing time for the request. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{a00023}{Request.\+h}}\end{DoxyCompactItemize}

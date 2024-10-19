@@ -1,0 +1,90 @@
+\doxysection{Request\+Queue Class Reference}
+\hypertarget{a00048}{}\label{a00048}\index{RequestQueue@{RequestQueue}}
+
+
+Handles a queue of requests.  
+
+
+
+
+{\ttfamily \#include $<$Request\+Queue.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{a00048_a36ee327b27c6c2fa511e01b47cb3f21a}{Is\+Empty}} () const
+\begin{DoxyCompactList}\small\item\em Checks if the request queue is empty. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a00044}{Request}} \mbox{\hyperlink{a00048_a46f0a411a4ae00af3712e306ea2348c6}{pop}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves and removes the front request in the queue. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a00048_a1a11d61ab39bdb4e8520087212d843c9}{push}} (const \mbox{\hyperlink{a00044}{Request}} \&request)
+\begin{DoxyCompactList}\small\item\em Adds a request to the queue. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{a00048_a740fb2303eb31d5339d0f9cab7ce011e}{size}} () const
+\begin{DoxyCompactList}\small\item\em Returns the size of the request queue. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handles a queue of requests. 
+
+Provides an interface to manage a queue of requests, including adding new requests, and removing them, checking if the queue is empty, and getting its size. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{a00048_a36ee327b27c6c2fa511e01b47cb3f21a}\index{RequestQueue@{RequestQueue}!IsEmpty@{IsEmpty}}
+\index{IsEmpty@{IsEmpty}!RequestQueue@{RequestQueue}}
+\doxysubsubsection{\texorpdfstring{IsEmpty()}{IsEmpty()}}
+{\footnotesize\ttfamily \label{a00048_a36ee327b27c6c2fa511e01b47cb3f21a} 
+bool Request\+Queue\+::\+Is\+Empty (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Checks if the request queue is empty. 
+
+\begin{DoxyReturn}{Returns}
+True if empty, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{a00048_a46f0a411a4ae00af3712e306ea2348c6}\index{RequestQueue@{RequestQueue}!pop@{pop}}
+\index{pop@{pop}!RequestQueue@{RequestQueue}}
+\doxysubsubsection{\texorpdfstring{pop()}{pop()}}
+{\footnotesize\ttfamily \label{a00048_a46f0a411a4ae00af3712e306ea2348c6} 
+\mbox{\hyperlink{a00044}{Request}} Request\+Queue\+::pop (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves and removes the front request in the queue. 
+
+\begin{DoxyReturn}{Returns}
+The front request. 
+\end{DoxyReturn}
+\Hypertarget{a00048_a1a11d61ab39bdb4e8520087212d843c9}\index{RequestQueue@{RequestQueue}!push@{push}}
+\index{push@{push}!RequestQueue@{RequestQueue}}
+\doxysubsubsection{\texorpdfstring{push()}{push()}}
+{\footnotesize\ttfamily \label{a00048_a1a11d61ab39bdb4e8520087212d843c9} 
+void Request\+Queue\+::push (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{a00044}{Request}} \&}]{request}{}\end{DoxyParamCaption})}
+
+
+
+Adds a request to the queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em request} & The request to add to the queue. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{a00048_a740fb2303eb31d5339d0f9cab7ce011e}\index{RequestQueue@{RequestQueue}!size@{size}}
+\index{size@{size}!RequestQueue@{RequestQueue}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily \label{a00048_a740fb2303eb31d5339d0f9cab7ce011e} 
+int Request\+Queue\+::size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Returns the size of the request queue. 
+
+\begin{DoxyReturn}{Returns}
+The number of requests in the queue. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{a00026}{Request\+Queue.\+h}}\item 
+src/\mbox{\hyperlink{a00008}{Request\+Queue.\+cpp}}\end{DoxyCompactItemize}

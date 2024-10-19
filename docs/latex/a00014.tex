@@ -1,0 +1,138 @@
+\doxysection{src/main.cpp File Reference}
+\hypertarget{a00014}{}\label{a00014}\index{src/main.cpp@{src/main.cpp}}
+
+
+Load balancer simulation for handling web server requests.  
+
+
+{\ttfamily \#include "{}Request.\+h"{}}\newline
+{\ttfamily \#include "{}Web\+Server.\+h"{}}\newline
+{\ttfamily \#include "{}Load\+Balancer.\+h"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$ctime$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$functional$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{a00014_abf0b2718aa8a50c1942f694500b61bf9}{Simulation\+ID}} ()
+\begin{DoxyCompactList}\small\item\em Generates a unique simulation ID using the current time. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a00014_a0eb34184a19958adcc2077d9331956e9}{print}} (ofstream \&log\+File, const string \&message)
+\begin{DoxyCompactList}\small\item\em Outputs a message to both the terminal and the log file. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a00044}{Request}} \mbox{\hyperlink{a00014_ab009d2590384615cafe33e5afbda774a}{Create\+Random\+Request}} ()
+\begin{DoxyCompactList}\small\item\em Creates a random request. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{a00014_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Main function to run the load balancer simulation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{a00014_a8d8821219703856cc7c74ca4eb7b2725}{k\+Num\+Web\+Servers}} = 10
+\begin{DoxyCompactList}\small\item\em Number of web servers in the simulation. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{a00014_a4b76d4688d62239e4132e61950c073d4}{k\+Num\+Requests}} = \mbox{\hyperlink{a00014_a8d8821219703856cc7c74ca4eb7b2725}{k\+Num\+Web\+Servers}} \texorpdfstring{$\ast$}{*} 100
+\begin{DoxyCompactList}\small\item\em Number of requests initially generated in the simulation. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{a00014_ac8aadb5eb6147f054cfaf7b3fe18e7a6}{k\+Sim\+Duration}} = 10000
+\begin{DoxyCompactList}\small\item\em Total duration of the simulation, measured in cycles. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Load balancer simulation for handling web server requests. 
+
+This simulates a load balancer distributing network requests across multiple web servers. It dynamically manages the servers, adjusting their count based on the current load in the queue. You\textquotesingle{}ll see logs for things like assigning requests, adding servers, or removing them when necessary. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{a00014_ab009d2590384615cafe33e5afbda774a}\index{main.cpp@{main.cpp}!CreateRandomRequest@{CreateRandomRequest}}
+\index{CreateRandomRequest@{CreateRandomRequest}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{CreateRandomRequest()}{CreateRandomRequest()}}
+{\footnotesize\ttfamily \label{a00014_ab009d2590384615cafe33e5afbda774a} 
+\mbox{\hyperlink{a00044}{Request}} Create\+Random\+Request (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Creates a random request. 
+
+Generates a {\ttfamily \doxylink{a00044}{Request}} object with random source and destination IPs, processing time, and job type (\textquotesingle{}P\textquotesingle{} for primary, \textquotesingle{}S\textquotesingle{} for secondary) and a unique hashed ID.
+
+\begin{DoxyReturn}{Returns}
+A randomly generated {\ttfamily \doxylink{a00044}{Request}} object. 
+\end{DoxyReturn}
+\Hypertarget{a00014_ae66f6b31b5ad750f1fe042a706a4e3d4}\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{a00014_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+int main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Main function to run the load balancer simulation. 
+
+Initializes the load balancer, generates requests, manages servers, and processes them throughout the simulation. Adjusts the server count based on queue load and logs key events like adding/removing servers and handling requests.
+
+\begin{DoxyReturn}{Returns}
+0 when the simulation completes successfully. 
+\end{DoxyReturn}
+\Hypertarget{a00014_a0eb34184a19958adcc2077d9331956e9}\index{main.cpp@{main.cpp}!print@{print}}
+\index{print@{print}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily \label{a00014_a0eb34184a19958adcc2077d9331956e9} 
+void print (\begin{DoxyParamCaption}\item[{ofstream \&}]{log\+File}{, }\item[{const string \&}]{message}{}\end{DoxyParamCaption})}
+
+
+
+Outputs a message to both the terminal and the log file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em log\+File} & The file where the message will be logged. \\
+\hline
+{\em message} & The message to display and log. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{a00014_abf0b2718aa8a50c1942f694500b61bf9}\index{main.cpp@{main.cpp}!SimulationID@{SimulationID}}
+\index{SimulationID@{SimulationID}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{SimulationID()}{SimulationID()}}
+{\footnotesize\ttfamily \label{a00014_abf0b2718aa8a50c1942f694500b61bf9} 
+string Simulation\+ID (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Generates a unique simulation ID using the current time. 
+
+\begin{DoxyReturn}{Returns}
+A string representing the unique simulation ID. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{a00014_a4b76d4688d62239e4132e61950c073d4}\index{main.cpp@{main.cpp}!kNumRequests@{kNumRequests}}
+\index{kNumRequests@{kNumRequests}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{kNumRequests}{kNumRequests}}
+{\footnotesize\ttfamily \label{a00014_a4b76d4688d62239e4132e61950c073d4} 
+int k\+Num\+Requests = \mbox{\hyperlink{a00014_a8d8821219703856cc7c74ca4eb7b2725}{k\+Num\+Web\+Servers}} \texorpdfstring{$\ast$}{*} 100}
+
+
+
+Number of requests initially generated in the simulation. 
+
+\Hypertarget{a00014_a8d8821219703856cc7c74ca4eb7b2725}\index{main.cpp@{main.cpp}!kNumWebServers@{kNumWebServers}}
+\index{kNumWebServers@{kNumWebServers}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{kNumWebServers}{kNumWebServers}}
+{\footnotesize\ttfamily \label{a00014_a8d8821219703856cc7c74ca4eb7b2725} 
+int k\+Num\+Web\+Servers = 10}
+
+
+
+Number of web servers in the simulation. 
+
+\Hypertarget{a00014_ac8aadb5eb6147f054cfaf7b3fe18e7a6}\index{main.cpp@{main.cpp}!kSimDuration@{kSimDuration}}
+\index{kSimDuration@{kSimDuration}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{kSimDuration}{kSimDuration}}
+{\footnotesize\ttfamily \label{a00014_ac8aadb5eb6147f054cfaf7b3fe18e7a6} 
+int k\+Sim\+Duration = 10000}
+
+
+
+Total duration of the simulation, measured in cycles. 
+

@@ -1,0 +1,117 @@
+\doxysection{Load\+Balancer Class Reference}
+\hypertarget{a00040}{}\label{a00040}\index{LoadBalancer@{LoadBalancer}}
+
+
+Manages load balancing for web server requests.  
+
+
+
+
+{\ttfamily \#include $<$Load\+Balancer.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{a00040_a6e6669a6a4f0c3df345a13246b17a84b}{Load\+Balancer}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{a00040}{Load\+Balancer}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{a00040_a450bf9a06d275267633fbff1991b550a}{Get\+System\+Time}} () const
+\begin{DoxyCompactList}\small\item\em Getter for private member current system time. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a00040_a7108bd8fcfc28c578790fd50287bee20}{Increment\+Time}} ()
+\begin{DoxyCompactList}\small\item\em Increments the system time by 1. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a00040_aa1a1a412413ecb6ad8d97cf568589cf8}{Add\+Request}} (const \mbox{\hyperlink{a00044}{Request}} \&request)
+\begin{DoxyCompactList}\small\item\em Adds a request to the request queue. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a00044}{Request}} \mbox{\hyperlink{a00040_af319ba7168b4d7ac78884c27f18105b5}{Get\+Request}} ()
+\begin{DoxyCompactList}\small\item\em Getter and remover of the next request from the queue. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{a00040_a6d9ab5a40cc1a307fed59b0911256570}{Get\+Queue\+Size}} () const
+\begin{DoxyCompactList}\small\item\em Getter for the current size of the request queue. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages load balancing for web server requests. 
+
+This class handles incoming requests, assigning them to web servers, while also managing system time and the request queue. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{a00040_a6e6669a6a4f0c3df345a13246b17a84b}\index{LoadBalancer@{LoadBalancer}!LoadBalancer@{LoadBalancer}}
+\index{LoadBalancer@{LoadBalancer}!LoadBalancer@{LoadBalancer}}
+\doxysubsubsection{\texorpdfstring{LoadBalancer()}{LoadBalancer()}}
+{\footnotesize\ttfamily \label{a00040_a6e6669a6a4f0c3df345a13246b17a84b} 
+Load\+Balancer\+::\+Load\+Balancer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{a00040}{Load\+Balancer}. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{a00040_aa1a1a412413ecb6ad8d97cf568589cf8}\index{LoadBalancer@{LoadBalancer}!AddRequest@{AddRequest}}
+\index{AddRequest@{AddRequest}!LoadBalancer@{LoadBalancer}}
+\doxysubsubsection{\texorpdfstring{AddRequest()}{AddRequest()}}
+{\footnotesize\ttfamily \label{a00040_aa1a1a412413ecb6ad8d97cf568589cf8} 
+void Load\+Balancer\+::\+Add\+Request (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{a00044}{Request}} \&}]{request}{}\end{DoxyParamCaption})}
+
+
+
+Adds a request to the request queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em request} & The request to be added. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{a00040_a6d9ab5a40cc1a307fed59b0911256570}\index{LoadBalancer@{LoadBalancer}!GetQueueSize@{GetQueueSize}}
+\index{GetQueueSize@{GetQueueSize}!LoadBalancer@{LoadBalancer}}
+\doxysubsubsection{\texorpdfstring{GetQueueSize()}{GetQueueSize()}}
+{\footnotesize\ttfamily \label{a00040_a6d9ab5a40cc1a307fed59b0911256570} 
+int Load\+Balancer\+::\+Get\+Queue\+Size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Getter for the current size of the request queue. 
+
+\begin{DoxyReturn}{Returns}
+The size of the queue. 
+\end{DoxyReturn}
+\Hypertarget{a00040_af319ba7168b4d7ac78884c27f18105b5}\index{LoadBalancer@{LoadBalancer}!GetRequest@{GetRequest}}
+\index{GetRequest@{GetRequest}!LoadBalancer@{LoadBalancer}}
+\doxysubsubsection{\texorpdfstring{GetRequest()}{GetRequest()}}
+{\footnotesize\ttfamily \label{a00040_af319ba7168b4d7ac78884c27f18105b5} 
+\mbox{\hyperlink{a00044}{Request}} Load\+Balancer\+::\+Get\+Request (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Getter and remover of the next request from the queue. 
+
+\begin{DoxyReturn}{Returns}
+The next request. 
+\end{DoxyReturn}
+\Hypertarget{a00040_a450bf9a06d275267633fbff1991b550a}\index{LoadBalancer@{LoadBalancer}!GetSystemTime@{GetSystemTime}}
+\index{GetSystemTime@{GetSystemTime}!LoadBalancer@{LoadBalancer}}
+\doxysubsubsection{\texorpdfstring{GetSystemTime()}{GetSystemTime()}}
+{\footnotesize\ttfamily \label{a00040_a450bf9a06d275267633fbff1991b550a} 
+int Load\+Balancer\+::\+Get\+System\+Time (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Getter for private member current system time. 
+
+\begin{DoxyReturn}{Returns}
+The current system time. 
+\end{DoxyReturn}
+\Hypertarget{a00040_a7108bd8fcfc28c578790fd50287bee20}\index{LoadBalancer@{LoadBalancer}!IncrementTime@{IncrementTime}}
+\index{IncrementTime@{IncrementTime}!LoadBalancer@{LoadBalancer}}
+\doxysubsubsection{\texorpdfstring{IncrementTime()}{IncrementTime()}}
+{\footnotesize\ttfamily \label{a00040_a7108bd8fcfc28c578790fd50287bee20} 
+void Load\+Balancer\+::\+Increment\+Time (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Increments the system time by 1. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{a00020}{Load\+Balancer.\+h}}\item 
+src/\mbox{\hyperlink{a00005}{Load\+Balancer.\+cpp}}\end{DoxyCompactItemize}
