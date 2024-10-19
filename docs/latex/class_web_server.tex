@@ -1,0 +1,131 @@
+\doxysection{Web\+Server Class Reference}
+\hypertarget{class_web_server}{}\label{class_web_server}\index{WebServer@{WebServer}}
+
+
+Represents a web server that processes requests.  
+
+
+
+
+{\ttfamily \#include $<$Web\+Server.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_web_server_ad053f4e1808a3c10c7522d0dbbbc031a}{Web\+Server}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for \doxylink{class_web_server}{Web\+Server}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_web_server_a5044757cd8574d3f62a7eec5d51fb00f}{Web\+Server}} (int id)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_web_server}{Web\+Server} with a specific ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_web_server_a96239cd034fc81fe3d7991788d7dde57}{Add\+Request}} (const \mbox{\hyperlink{struct_request}{Request}} \&req, int curr\+\_\+time)
+\begin{DoxyCompactList}\small\item\em Assigns a request to the server for processing. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_request}{Request}} \mbox{\hyperlink{class_web_server_acd5582163071da63366b893890cbacd2}{Get\+Request}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the current request being processed by the server. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_web_server_a5fa40b44c261b0ccd8a29e1ced9c0d08}{Get\+Id}} () const
+\begin{DoxyCompactList}\small\item\em Returns the unique ID of the server. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_web_server_a0def5fe19b5db7855fefe1c01b29652a}{Is\+Request\+Done}} (int curr\+\_\+time) const
+\begin{DoxyCompactList}\small\item\em Checks if the current request is complete based on the system time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a web server that processes requests. 
+
+The \doxylink{class_web_server}{Web\+Server} class is responsible for handling requests assigned to it. It tracks the request start time and determines if the request is complete. The class also provides functions to assign requests to the server and retrieve the request details. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_web_server_ad053f4e1808a3c10c7522d0dbbbc031a}\index{WebServer@{WebServer}!WebServer@{WebServer}}
+\index{WebServer@{WebServer}!WebServer@{WebServer}}
+\doxysubsubsection{\texorpdfstring{WebServer()}{WebServer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_web_server_ad053f4e1808a3c10c7522d0dbbbc031a} 
+Web\+Server\+::\+Web\+Server (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Default constructor for \doxylink{class_web_server}{Web\+Server}. 
+
+Constructs a \doxylink{class_web_server}{Web\+Server} with default values. \Hypertarget{class_web_server_a5044757cd8574d3f62a7eec5d51fb00f}\index{WebServer@{WebServer}!WebServer@{WebServer}}
+\index{WebServer@{WebServer}!WebServer@{WebServer}}
+\doxysubsubsection{\texorpdfstring{WebServer()}{WebServer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_web_server_a5044757cd8574d3f62a7eec5d51fb00f} 
+Web\+Server\+::\+Web\+Server (\begin{DoxyParamCaption}\item[{int}]{id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructs a \doxylink{class_web_server}{Web\+Server} with a specific ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The unique ID of the server. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_web_server_a96239cd034fc81fe3d7991788d7dde57}\index{WebServer@{WebServer}!AddRequest@{AddRequest}}
+\index{AddRequest@{AddRequest}!WebServer@{WebServer}}
+\doxysubsubsection{\texorpdfstring{AddRequest()}{AddRequest()}}
+{\footnotesize\ttfamily \label{class_web_server_a96239cd034fc81fe3d7991788d7dde57} 
+void Web\+Server\+::\+Add\+Request (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_request}{Request}} \&}]{req}{, }\item[{int}]{curr\+\_\+time}{}\end{DoxyParamCaption})}
+
+
+
+Assigns a request to the server for processing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em req} & The request to be processed. \\
+\hline
+{\em curr\+\_\+time} & The current system time when the request was assigned. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_web_server_a5fa40b44c261b0ccd8a29e1ced9c0d08}\index{WebServer@{WebServer}!GetId@{GetId}}
+\index{GetId@{GetId}!WebServer@{WebServer}}
+\doxysubsubsection{\texorpdfstring{GetId()}{GetId()}}
+{\footnotesize\ttfamily \label{class_web_server_a5fa40b44c261b0ccd8a29e1ced9c0d08} 
+int Web\+Server\+::\+Get\+Id (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Returns the unique ID of the server. 
+
+\begin{DoxyReturn}{Returns}
+The server\textquotesingle{}s ID. 
+\end{DoxyReturn}
+\Hypertarget{class_web_server_acd5582163071da63366b893890cbacd2}\index{WebServer@{WebServer}!GetRequest@{GetRequest}}
+\index{GetRequest@{GetRequest}!WebServer@{WebServer}}
+\doxysubsubsection{\texorpdfstring{GetRequest()}{GetRequest()}}
+{\footnotesize\ttfamily \label{class_web_server_acd5582163071da63366b893890cbacd2} 
+\mbox{\hyperlink{struct_request}{Request}} Web\+Server\+::\+Get\+Request (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the current request being processed by the server. 
+
+\begin{DoxyReturn}{Returns}
+The current request. 
+\end{DoxyReturn}
+\Hypertarget{class_web_server_a0def5fe19b5db7855fefe1c01b29652a}\index{WebServer@{WebServer}!IsRequestDone@{IsRequestDone}}
+\index{IsRequestDone@{IsRequestDone}!WebServer@{WebServer}}
+\doxysubsubsection{\texorpdfstring{IsRequestDone()}{IsRequestDone()}}
+{\footnotesize\ttfamily \label{class_web_server_a0def5fe19b5db7855fefe1c01b29652a} 
+bool Web\+Server\+::\+Is\+Request\+Done (\begin{DoxyParamCaption}\item[{int}]{curr\+\_\+time}{}\end{DoxyParamCaption}) const}
+
+
+
+Checks if the current request is complete based on the system time. 
+
+The request is considered complete if the current system time exceeds the start time of the request plus the time required to process it.
+
+
+\begin{DoxyParams}{Parameters}
+{\em curr\+\_\+time} & The current system time. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the request is complete, false otherwise. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_web_server_8h}{Web\+Server.\+h}}\item 
+src/\mbox{\hyperlink{_web_server_8cpp}{Web\+Server.\+cpp}}\end{DoxyCompactItemize}

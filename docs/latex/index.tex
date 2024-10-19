@@ -1,0 +1,105 @@
+\chapter{Load Balancer Simulation}
+\hypertarget{index}{}\label{index}\index{Load Balancer Simulation@{Load Balancer Simulation}}
+\label{index_md__r_e_a_d_m_e}%
+\Hypertarget{index_md__r_e_a_d_m_e}%
+\hypertarget{index_autotoc_md1}{}\doxysection{\texorpdfstring{Overview}{Overview}}\label{index_autotoc_md1}
+This project simulates a load balancer that distributes network requests to web servers. The system handles requests by assigning them to available servers, each of which processes the request and tracks its status. The simulation allows for the dynamic addition and removal of servers based on the request load.
+
+The main components of the simulation include\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{\doxylink{struct_request}{Request}}}\+: Represents a network request with metadata such as source and destination IPs, processing time, and job type.
+\item {\bfseries{\doxylink{class_request_queue}{Request\+Queue}}}\+: Manages a queue of requests to be processed by the load balancer.
+\item {\bfseries{\doxylink{class_web_server}{Web\+Server}}}\+: Represents a server that processes assigned requests.
+\item {\bfseries{\doxylink{class_load_balancer}{Load\+Balancer}}}\+: Manages the distribution of requests to web servers.
+\end{DoxyItemize}\hypertarget{index_autotoc_md2}{}\doxysection{\texorpdfstring{Project Structure}{Project Structure}}\label{index_autotoc_md2}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{/loadbalancer\_project}
+\DoxyCodeLine{├──\ /docs\ \#\ Doxygen\ documentation}
+\DoxyCodeLine{├──\ /include\ \#\ Header\ files}
+\DoxyCodeLine{├──\ /src\ \#\ Source\ files}
+\DoxyCodeLine{├──\ /scripts\ \#\ Python\ scripts}
+\DoxyCodeLine{├──\ Doxyfile\ \#\ Doxygen\ configuration\ file}
+\DoxyCodeLine{├──\ Makefile\ \#\ Makefile\ for\ building\ and\ generating\ documentation}
+\DoxyCodeLine{└──\ README.md\ \#\ Project\ overview\ and\ instructions}
+\DoxyCodeLine{}
+\DoxyCodeLine{\`{}\`{}\`{}\`{}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#\#\ Installation}
+\DoxyCodeLine{}
+\DoxyCodeLine{1.\ **Clone\ the\ repository**:}
+
+\end{DoxyCode}
+ bash git clone \texorpdfstring{$<$}{<}repository-\/url\texorpdfstring{$>$}{>} \`{}\`{}\`{}\`{}
+
+
+\begin{DoxyEnumerate}
+\item {\bfseries{Install dependencies}}\+:
+\begin{DoxyItemize}
+\item You need a C++ compiler (e.\+g., {\ttfamily g++}) and Doxygen to generate the documentation.
+\item For Python plotting, install the required libraries\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{pip\ install\ pandas\ matplotlib}
+
+\end{DoxyCode}
+
+\end{DoxyItemize}
+\end{DoxyEnumerate}\hypertarget{index_autotoc_md3}{}\doxysection{\texorpdfstring{Building and Running}{Building and Running}}\label{index_autotoc_md3}
+
+\begin{DoxyEnumerate}
+\item {\bfseries{Build the project}}\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{make}
+
+\end{DoxyCode}
+
+\item {\bfseries{Run the simulation}}\+:
+\begin{DoxyItemize}
+\item {\bfseries{Interactive run}} (input servers and cycles manually)\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{make\ run}
+
+\end{DoxyCode}
+
+\item {\bfseries{Default run}} (10 servers, 10000 cycles)\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{make\ run-\/default}
+
+\end{DoxyCode}
+
+\end{DoxyItemize}
+\item {\bfseries{Generate documentation}}\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{make\ docs}
+
+\end{DoxyCode}
+
+\end{DoxyEnumerate}\hypertarget{index_autotoc_md4}{}\doxysection{\texorpdfstring{Python Plotting Script}{Python Plotting Script}}\label{index_autotoc_md4}
+The Python script {\ttfamily \doxylink{plot__data_8py}{plot\+\_\+data.\+py}} is used to plot the simulation statistics.
+
+
+\begin{DoxyItemize}
+\item {\bfseries{Run the script}}\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{python3\ scripts/plot\_data.py}
+
+\end{DoxyCode}
+
+\item The script will prompt for a simulation ID and generate a plot of the simulation\textquotesingle{}s queue size and active servers over time.
+\end{DoxyItemize}\hypertarget{index_autotoc_md5}{}\doxysection{\texorpdfstring{Documentation}{Documentation}}\label{index_autotoc_md5}
+The documentation for the project is generated using Doxygen. After generating the documentation, you can open it by navigating to the {\ttfamily docs/html/index.\+html} file in your web browser.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{make\ docs}
+
+\end{DoxyCode}
+
+
+For detailed documentation, see the \href{./docs/html/index.html}{\texttt{ Project Documentation}}. 
